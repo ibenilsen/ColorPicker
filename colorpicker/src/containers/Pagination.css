@@ -1,0 +1,15 @@
+.Pagination {
+  list-style:none;
+  padding:0;
+  text-align: center;
+}
+.Pagination > li {
+  display:inline-block;
+  cursor:pointer;
+  padding:0 .5em;
+  user-select:none;
+}
+.Pagination > li.active {
+  font-weight:900;
+  border-bottom:2px solid #363C3C;
+}

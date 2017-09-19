@@ -1,0 +1,41 @@
+.SearchBar {
+  margin-left: auto;
+  align-self: center;
+  padding:1em;
+  position:relative;
+}
+.SearchBar input {
+  padding:1em;
+  border-radius:10px;
+  border:none;
+  min-width:200px;
+}
+
+.SearchBar .results {
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  max-height:200px;
+  overflow:scroll;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 0 2em 0 rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.03);
+}
+
+.SearchBar .results .result {
+  display:block;
+  color:#363C3C;
+  padding:1em;
+}
+.SearchBar .results .result:hover {
+  background:#f9f9f9;
+}
+.SearchBar .results .result span {
+  border-radius:4px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:10px;
+}
