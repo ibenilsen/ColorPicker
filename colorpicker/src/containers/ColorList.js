@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ColorCard from '../components/ColorCard';
-import ListPagination from './Pagination';
+import Pagination from './Pagination';
 
 class ColorList extends Component {
   renderCards() {
@@ -17,7 +17,7 @@ class ColorList extends Component {
         <div className="row">
           {this.renderCards()}
         </div>
-          <ListPagination />
+          <Pagination />
       </div>
     )
   }
