@@ -20,7 +20,7 @@ ReactDOM.render(
         <App>
           <Switch>
             <Route path="/color/:id" component={ColorDetail} />
-            <Route path="/" component={ColorList} />
+            <Route path={process.env.PUBLIC_URL + "/"} component={ColorList} />
           </Switch>
         </App>
     </BrowserRouter>
