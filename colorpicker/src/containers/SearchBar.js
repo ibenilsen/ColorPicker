@@ -12,19 +12,20 @@ class SearchBar extends Component {
   renderResults() {
     const input = this.state.term;
     if(input.length > 0) {
-      const colors = this.props.colors;
       const regex = new RegExp(input, 'i');
-      const result = _.filter(colors, function(elem) {return regex.test(elem.hex);});
+      const result = _.filter(this.props.colors, function(elem) {return regex.test(elem.hex);});
+      const uniq = _.uniqBy(result, function(o){return o.hex;});
       return (
         <div className="results" onClick={(event) => this.onResultClick()}>
-          {result.map( (color) => {
-            return (
-              <Link to={`/color/${color.hex}`}  key={color.hex} className="result">
-              <span style={{background: `#${color.hex}`}}></span>
-              #{color.hex}
-            </Link>
-          )
-        })}
+          {
+            uniq.map( (color) => {
+              return (
+                <Link to={`/color/${color.hex}`}  key={color.hex} className="result">
+                <span style={{background: `#${color.hex}`}}></span> #{color.hex}
+              </Link>
+            )
+          })
+        }
       </div>
     )
   }

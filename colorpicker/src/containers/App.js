@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../images/logo-symbol.svg';
-import Sidebar from './Sidebar';
+import Sidebar from '../components/Sidebar';
 import SearchBar from './SearchBar';
 import './App.css';
 

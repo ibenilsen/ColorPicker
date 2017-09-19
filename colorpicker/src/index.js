@@ -8,7 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import reducers from './reducers';
-import App from './components/App';
+import App from './containers/App';
 import ColorList from './containers/ColorList';
 import ColorDetail from './components/ColorDetail';
 
