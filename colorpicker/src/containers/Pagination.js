@@ -15,8 +15,8 @@ class Pagination extends Component {
     }
     return range.map(pageNumber => {
       const isCurrentPage = pageNumber === this.props.activePage;
-      const onClick = e => {
-        e.preventDefault();
+      const onClick = event => {
+        event.preventDefault();
         this.props.selectPage(pageNumber);
       };
       return (

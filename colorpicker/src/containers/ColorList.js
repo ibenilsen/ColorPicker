@@ -4,7 +4,7 @@ import ColorCard from '../components/ColorCard';
 import ListPagination from './Pagination';
 
 class ColorList extends Component {
-  renderList() {
+  renderCards() {
     const startIndex = 12 * this.props.activePage;
     const result = this.props.colors.slice(startIndex, startIndex + 12);
     return result.map( (color) => {
@@ -15,7 +15,7 @@ class ColorList extends Component {
     return (
       <div className="ColorList">
         <div className="row">
-          {this.renderList()}
+          {this.renderCards()}
         </div>
           <ListPagination />
       </div>

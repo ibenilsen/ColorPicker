@@ -3,6 +3,7 @@ import logo from '../images/logo-symbol.svg';
 import Sidebar from './Sidebar';
 import SearchBar from './SearchBar';
 import './App.css';
+
 class App extends Component {
   render() {
     return (

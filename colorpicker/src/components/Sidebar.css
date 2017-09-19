@@ -22,6 +22,7 @@
 .Sidebar .menu li {
   margin:.5em 0;
   font-size:28px;
+  text-transform: capitalize;
 }
 
 @media only screen and (max-width: 768px) {
