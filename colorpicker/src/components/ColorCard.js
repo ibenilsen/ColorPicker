@@ -2,10 +2,10 @@ import React from 'react';
 import './ColorCard.css';
 import { Link } from 'react-router-dom';
 
-const ColorCard = ({colorData}) => {
+const ColorCard = ({color}) => {
   return (
-    <Link to={`/color/${colorData.hex}`} className="ColorCard" style={{background: `#${colorData.hex}`}}>
-      <div className="titling">#{colorData.hex}</div>
+    <Link to={`/color/${color.hex}`} className="ColorCard" style={{background: `#${color.hex}`}}>
+      <div className="titling">#{color.hex}</div>
     </Link>
   )
 }

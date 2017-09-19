@@ -16,7 +16,7 @@ function renderShades(hex) {
   return result.map( (color) => {
     return (
       <div key={color} className="col-xs-6 col-sm-4 col-md-3">
-        <ColorCard colorData={{hex: `${color}`}} />
+        <ColorCard color={{hex: `${color}`}} />
       </div>
     )
   });
@@ -26,7 +26,7 @@ const ColorDetail = (props) => {
   return (
     <div className="ColorDetail row">
       <div className="col-xs-12 primary">
-        <ColorCard colorData={{hex: `${props.match.params.id}`}} />
+        <ColorCard color={{hex: `${props.match.params.id}`}} />
       </div>
       {renderShades(props.match.params.id)}
       <div className="col-xs-12 actions">
