@@ -13,14 +13,13 @@ import ColorList from './containers/ColorList';
 import ColorDetail from './components/ColorDetail';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <App>
           <Switch>
             <Route path="/color/:id" component={ColorDetail} />
-            <Route path={process.env.PUBLIC_URL + "/"} component={ColorList} />
+            <Route path="/" component={ColorList} />
           </Switch>
         </App>
     </BrowserRouter>
